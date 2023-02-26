@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PawHelp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+      <!-- for logo and name -->
+
+      <nav class="navbar" id="navbar-bg">
+        <div class="container-fluid">
+          <a class="navbar-brand" id="logo-heading" href="index.html">
+            <img
+              id="logo"
+              src="/image/logo.ico"
+              alt="Logo"
+              class="d-inline-block align-text-top"
+            />
+            <h1 id="heading-navbar">PawHelp</h1>
+          </a>
+        </div>
+      </nav>
+  
+      <!-- for navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark" id="bg-color">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Food!e</a> -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+  
+              <!-- for blog section  -->
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+              </li>
+  
+              <!-- for about section -->
+              <li class="nav-item">
+                <a class="nav-link " href="about.html">About Us</a>
+              </li>
+  
+              
+              <!-- this is for Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/adoption.html">Adoption</a></li>
+                    <li><a class="dropdown-item" href="https://www.flipkart.com/search?q=petcare%20&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" target="_blank">Pet Care And Grooming</a></li>
+                    <li><a class="dropdown-item" href="https://www.justdial.com/Kolkata/Veterinary-Hospitals/nct-10519292" target="_blank">Healthcare</a></li>
+                    <li><a class="dropdown-item" href="https://www.practo.com/kolkata/veterinarian" target="_blank">Veterinarians</a></li>
+                  </ul>
+              </li>
+  
+              <!-- for Review section -->
+              <li class="nav-item">
+                <a class="nav-link" href="review.html">Reviews</a>
+              </li>
+  
+              <!-- for Contact section -->
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <!-- for disable section -->
+              <!-- <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li> -->
+            </ul>
+  
+            <!-- for search button  -->
+            <!-- <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form> -->
+  
+            <!-- for login and signup -->
+  
+            <div class="mx-2 my-2">
+              <!-- Log In Button trigger modal -->
+              <button
+                class="btn btn-outline-info"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Log In
+              </button>
+  
+              <!-- Log In Modal -->
+              <div
+                class="modal fade"
+                id="loginModal"
+                tabindex="-1"
+                aria-labelledby="loginModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="loginModalLabel">
+                        Log In to CL!ck
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- form for Log In  -->
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"
+                            >Email address</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                          />
+                          <div id="emailHelp" class="form-text">
+                            We'll never share your email with anyone else.
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="exampleCheck1"
+                          />
+                          <label class="form-check-label" for="exampleCheck1"
+                            >Check In</label
+                          >
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                          Submit
+                        </button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Sign Up Button trigger modal -->
+              <button
+                class="btn btn-outline-info"
+                data-bs-toggle="modal"
+                data-bs-target="#SignInModal"
+              >
+                Sign Up
+              </button>
+  
+              <!-- Sign Up Modal -->
+              <div
+                class="modal fade"
+                id="SignInModal"
+                tabindex="-1"
+                aria-labelledby="SignInModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="SignInModalLabel">
+                        Sign In to CL!ck
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                              <label class="form-label" for="form3Example1"
+                                >First name</label
+                              >
+                              <input
+                                type="text"
+                                id="form3Example1"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                              <label class="form-label" for="form3Example2"
+                                >Last name</label
+                              >
+                              <input
+                                type="text"
+                                id="form3Example2"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"
+                            >Email address</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                          />
+                          <div id="emailHelp" class="form-text">
+                            We'll never share your email with anyone else.
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"
+                            >Confirm Password</label
+                          >
+                          <input
+                            type="Password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="exampleCheck1"
+                          />
+                          <label class="form-check-label" for="exampleCheck1"
+                            >Check In</label
+                          >
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                          SIgn In
+                        </button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- for services  -->
+            
+          </div>
+        </div>
+      </nav>
+
+
+
+    <!-- for Adoption section  -->
+    
+
+    <section class="vh-100 gradient-custom">
+      <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-12 col-lg-9 col-xl-7">
+            <div class="card shadow-2-strong card-registration" style="border-radius: 30px;">
+              <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Adoption Form</h3>
+                <form>
+    
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                        <input type="text" id="firstName" class="form-control form-control-lg" />
+                        <label class="form-label" for="firstName">Pet Name</label>
+                      </div>
+    
+                    </div>
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                        <input type="text" id="lastName" class="form-control form-control-lg" />
+                        <label class="form-label" for="lastName">Perspective Pet Parent</label>
+                      </div>
+    
+                    </div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col-md-6 mb-4 d-flex align-items-center">
+    
+                      <div class="form-outline datepicker w-100">
+                        <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                        <label for="birthdayDate" class="form-label">Age</label>
+                      </div>
+    
+                    </div>
+                    <div class="col-md-6 mb-4">
+    
+                      <h6 class="mb-2 pb-1">Gender: </h6>
+    
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                          value="option1" checked />
+                        <label class="form-check-label" for="femaleGender">Female</label>
+                      </div>
+    
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                          value="option2" />
+                        <label class="form-check-label" for="maleGender">Male</label>
+                      </div>
+    
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                          value="option3" />
+                        <label class="form-check-label" for="otherGender">Other</label>
+                      </div>
+    
+                    </div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+    
+                      <div class="form-outline">
+                        <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                        <label class="form-label" for="emailAddress">Email</label>
+                      </div>
+    
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+    
+                      <div class="form-outline">
+                        <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                        <label class="form-label" for="phoneNumber">Phone Number</label>
+                      </div>
+    
+                    </div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col-12">
+    
+                      <select class="select form-control-lg">
+                        <option value="1" disabled>Choose Option</option>
+                        <option value="2">Huskey</option>
+                        <option value="3">Labrador Retriever</option>
+                        <option value="4">Beagle</option>
+                        <option value="4">German Shepherd </option>
+                        <option value="4">Bulldog</option>
+                        <option value="4">Pug</option>
+                        <option value="4">Unidentified</option>
+                      </select>
+                      <label class="form-label select-label">Choose Breed</label>
+    
+                    </div>
+                  </div>
+    
+                  <div class="mt-4 pt-2">
+                    <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                  </div>
+    
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+    
+  <!-- for footer  -->
+  <div class="b-example-divider"></div>
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item active">
+          <a href="index.html" class="nav-link px-2 text-muted fw-bold">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="blog.html" class="nav-link px-2 text-muted fw-bold">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link px-2 text-muted fw-bold">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="review.html" class="nav-link px-2 text-muted fw-bold">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link px-2 text-muted fw-bold">Contact</a>
+        </li>
+      </ul>
+      
+      <div id="media-links">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+          <ul class="list-inline text-md-end">
+            <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center text-muted">Copyright © 2022 All Rights Reserved
+        <a href="index.html" class="nav-link px-4 fw-bold text-center text-muted">
+          PawHelp!
+        </a>
+      </p>
+
+      <!-- for the media links -->
+
+  </div> 
+  </footer>
+    
+  
+
+    
+    
+    
+
+    <!-- script for JS  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CL!ck</title>
+    <title>PawHelp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,23 +16,22 @@
   <body>
     <!-- for logo and name -->
 
-    <nav class="navbar bg-light">
+    <nav class="navbar" id="navbar-bg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" id="logo-heading" href="index.html">
           <img
-            src="logo.png"
+            id="logo"
+            src="/image/logo.ico"
             alt="Logo"
-            width="30"
-            height="28"
             class="d-inline-block align-text-top"
           />
-          CL!ck
+          <h1 id="heading-navbar">PawHelp</h1>
         </a>
       </div>
     </nav>
 
     <!-- for navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="bg-color">
       <div class="container-fluid">
         <!-- <a class="navbar-brand" href="#">Food!e</a> -->
         <button
@@ -47,7 +48,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
 
             <!-- for blog section  -->
@@ -55,39 +58,43 @@
               <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
             </li>
 
-            <!-- for Services section -->
-            <li class="nav-item">
-              <a class="nav-link" href="review.html">Reviews</a>
-            </li>
-
             <!-- for about section -->
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <!-- for dark and light theme  -->
+            <!-- <button type="button" class="btn btn-light">Light</button>
+              <button type="button" class="btn btn-dark">Dark</button> -->
+
+            <!-- this is for Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/adoption.html">Adoption</a></li>
+                <li><a class="dropdown-item" href="https://www.flipkart.com/search?q=petcare%20&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" target="_blank">Pet Care And Grooming</a></li>
+                <li><a class="dropdown-item" href="https://www.justdial.com/Kolkata/Veterinary-Hospitals/nct-10519292" target="_blank">Healthcare</a></li>
+                <li><a class="dropdown-item" href="https://www.practo.com/kolkata/veterinarian" target="_blank">Veterinarians</a></li>
+              </ul>
+            </li>
+
+            <!-- for Review section -->
+            <li class="nav-item">
+              <a class="nav-link" href="review.html">Reviews</a>
             </li>
 
             <!-- for Contact section -->
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
-
-            <!-- for dark and light theme  -->
-            <!-- <button type="button" class="btn btn-light">Light</button>
-            <button type="button" class="btn btn-dark">Dark</button> -->
-
-            <!-- this is for Dropdown -->
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                 
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li> -->
-
             <!-- for disable section -->
             <!-- <li class="nav-item">
                 <a class="nav-link disabled">Disabled</a>
@@ -95,7 +102,7 @@
           </ul>
 
           <!-- for search button  -->
-          <form class="d-flex" role="search">
+          <!-- <form class="d-flex" role="search">
             <input
               class="form-control me-2"
               type="search"
@@ -105,177 +112,397 @@
             <button class="btn btn-outline-success" type="submit">
               Search
             </button>
-          </form>
+          </form> -->
 
           <!-- for login and signup -->
 
           <div class="mx-2 my-2">
             <!-- Log In Button trigger modal -->
-<button  class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#loginModal">
-Log In
-</button>
+            <button
+              class="btn btn-outline-info"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Log In
+            </button>
 
-<!-- Log In Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-<div class="modal-dialog">
- <div class="modal-content">
-   <div class="modal-header">
-     <h1 class="modal-title fs-5" id="loginModalLabel">Log In to CL!ck</h1>
-     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-   </div>
-   <div class="modal-body">
-     
-     <!-- form for Log In  -->
-     <form>
-       <div class="mb-3">
-         <label for="exampleInputEmail1" class="form-label">Email address</label>
-         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-       </div>
-       <div class="mb-3">
-         <label for="exampleInputPassword1" class="form-label">Password</label>
-         <input type="password" class="form-control" id="exampleInputPassword1">
-       </div>
-       <div class="mb-3 form-check">
-         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-         <label class="form-check-label" for="exampleCheck1">Check In</label>
-       </div>
-       <button type="submit" class="btn btn-primary">Submit</button>
-     </form>
+            <!-- Log In Modal -->
+            <div
+              class="modal fade"
+              id="loginModal"
+              tabindex="-1"
+              aria-labelledby="loginModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalLabel">
+                      Log In to CL!ck
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- form for Log In  -->
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                        <div id="emailHelp" class="form-text">
+                          We'll never share your email with anyone else.
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                        />
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >Check In</label
+                        >
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
 
-   </div>
-   <div class="modal-footer">
-     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-     <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-   </div>
- </div>
-</div>
-</div>
+            <!-- Sign Up Button trigger modal -->
+            <button
+              class="btn btn-outline-info"
+              data-bs-toggle="modal"
+              data-bs-target="#SignInModal"
+            >
+              Sign Up
+            </button>
 
-<!-- Sign Up Button trigger modal -->
-<button  class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#SignInModal">
-Sign Up
-</button>
-
-<!-- Sign Up Modal -->
-<div class="modal fade" id="SignInModal" tabindex="-1" aria-labelledby="SignInModalLabel" aria-hidden="true">
-<div class="modal-dialog">
- <div class="modal-content">
-   <div class="modal-header">
-     <h1 class="modal-title fs-5" id="SignInModalLabel">Sign In to CL!ck</h1>
-     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-   </div>
-   <div class="modal-body">
-     <form>
-       <!-- 2 column grid layout with text inputs for the first and last names -->
-           <div class="row">
-             <div class="col-md-6 mb-4">
-               <div class="form-outline">
-                 <label class="form-label" for="form3Example1">First name</label>
-                 <input type="text" id="form3Example1" class="form-control" />
-               </div>
-             </div>
-             <div class="col-md-6 mb-4">
-               <div class="form-outline">
-                 <label class="form-label" for="form3Example2">Last name</label>
-                 <input type="text" id="form3Example2" class="form-control" />
-               </div>
-             </div>
-           </div>
-     <div class="mb-3">
-       <label for="exampleInputEmail1" class="form-label">Email address</label>
-       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-     </div>
-     <div class="mb-3">
-       <label for="exampleInputPassword1" class="form-label">Password</label>
-       <input type="password" class="form-control" id="exampleInputPassword1">
-     </div>
-     <div class="mb-3">
-       <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-       <input type="Password" class="form-control" id="exampleInputPassword1">
-     </div>
-     <div class="mb-3 form-check">
-       <input type="checkbox" class="form-check-input" id="exampleCheck1">
-       <label class="form-check-label" for="exampleCheck1">Check In</label>
-     </div>
-     <button type="submit" class="btn btn-primary">SIgn In</button>
-   </form>
-   </div>
-   <div class="modal-footer">
-     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-   </div>
- </div>
-</div>
-</div>
-       </div>
-
+            <!-- Sign Up Modal -->
+            <div
+              class="modal fade"
+              id="SignInModal"
+              tabindex="-1"
+              aria-labelledby="SignInModalLabel"
+              aria-hidden="true"
+             >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="SignInModalLabel">
+                      Sign In to CL!ck
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <!-- 2 column grid layout with text inputs for the first and last names -->
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1"
+                              >First name</label
+                            >
+                            <input
+                              type="text"
+                              id="form3Example1"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example2"
+                              >Last name</label
+                            >
+                            <input
+                              type="text"
+                              id="form3Example2"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                        <div id="emailHelp" class="form-text">
+                          We'll never share your email with anyone else.
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"
+                          >Confirm Password</label
+                        >
+                        <input
+                          type="Password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                        />
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >Check In</label
+                        >
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                        SIgn In
+                      </button>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
 
-
-
     <!-- for Blog section  -->
     <div class="container mx-auto my-4">
-    <div class="row featurette d-flex ">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam ex adipisci, itaque laboriosam repudiandae omnis odit porro eum reiciendis accusantium!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus commodi quis cum unde reiciendis ex, libero voluptatem, soluta perspiciatis quia corporis ipsa saepe et rerum reprehenderit tempora! Quia iure corrupti velit fugit alias libero ratione earum amet, nihil laboriosam voluptas dicta ullam consectetur! Consequatur officiis molestiae repudiandae rem pariatur. Atque, ipsa blanditiis molestiae iusto nam corrupti eum doloremque, perspiciatis necessitatibus, molestias mollitia. Nemo recusandae consectetur eaque rerum officiis, illum hic.
-        </p>
+      <!-- blog-1 -->
+      <div class="row featurette d-flex">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">
+            Things Every First-Time Dog Owner Should Know
+          </h2>
+          <p class="lead">
+            Whether you’re a college student or senior citizen, adopting your
+            first dog is a momentous and exciting experience. No doubt you’ve
+            got your new best friend’s food and bowls, bag of treats, new leash
+            and collar, and shiny toys ready to go. But fun and kibble aren’t
+            the only the responsibilities of being a good pet owner. While lots
+            of love and good nutrition are certainly an important part of pet
+            ownership, it’s also important to consider how your new four-legged
+            friend will impact your home and life, and plan accordingly.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            src="/image/blog-1.jpeg"
+            alt=""
+            width="500"
+            height="500"
+          />
+        </div>
       </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="blog-1.png" alt="" width="500" height="500">
+
+      <hr class="featurette-divider" />
+      <!-- blog-2 -->
+      <div class="row featurette d-flex">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">
+            How to Help a Reluctant Pet Take Medication
+          </h2>
+          <p class="lead">
+            Aside from the dreaded task of tooth brushing, many pet owners
+            struggle with administering medications. Most animals don’t like
+            their mouths touched, and there are times when no amount of treats
+            or promises will convince a pet to take medication.
+            However,understanding your options and learning simple tips for
+            pills and capsules can be useful. Oral medications generally come as
+            a pill, capsule, chewable tablet, or in liquid form. If your pet is
+            particularly resistant when it comes to swallowing a pill, ask the
+            team at Schertz Animal Hospital if a liquid alternative is
+            available. Dosage is also important. Antibiotics, for example, must
+            be administered until all pills are gone; otherwise, you risk
+            decreasing their effectiveness. Pets who require multiple meds each
+            day will need a schedule, unlike medications that are taken on an
+            “as needed” basis.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            src="/image/blog-2.webp"
+            alt=""
+            width="500"
+            height="500"
+          />
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+      <!-- blog-3  -->
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Vet Approved People Food for Pets</h2>
+          <p class="lead">
+            You have probably run across those long lists of foods deemed not
+            safe to give your pets. If you are like the vast majority of the
+            animal-loving population, though, you probably can’t resist sliding
+            a little food from the table to your favorite furry friends. So what
+            foods are okay, and which are an absolute no-no? Keep reading to
+            learn some options for people food for pets that have received a
+            stamp of approval here at Schertz Animal Hospital. In general, most
+            veterinarians instruct pet owners to steer clear of people foods.
+            There are a few reasons for this.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            src="/image/blog-3.jpg"
+            alt=""
+            width="500"
+            height="700"
+          />
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <!-- blog-4  -->
+      <div class="row featurette d-flex">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">
+            How to Clean Dog Ears with Confidence
+          </h2>
+          <p class="lead">
+            Most pet owners are a little apprehensive when it comes to cleaning
+            ears. How do I do it? What if I hurt him? Do I need an ear cleaner?
+            How do I know what is normal? Thankfully, knowing how to clean dog
+            ears isn’t rocket science. Half of the battle is knowing what’s what
+            when it comes to your pet’s ears. Those furry flaps look a little
+            different than our own ears, but we have all of the same parts. The
+            pinna – The outer ear flap, called the pinna, can come in many
+            shapes and sizes. Its main jobs are to protect the ear canal and
+            channel sounds in towards the eardrum. The ear canal – The opening
+            inside the pinna lead to a long, L-shaped tunnel known as the
+            external ear canal. This tube leads to the eardrum.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            src="/image/blog-2.webp"
+            alt=""
+            width="500"
+            height="500"
+          />
+        </div>
       </div>
     </div>
 
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quos, commodi doloribus libero laboriosam blanditiis recusandae praesentium. Voluptatibus aspernatur nostrum veritatis magnam et autem, asperiores dolores tempora dicta minus odit ullam, adipisci corrupti! Officiis, vitae est quia aliquam asperiores, suscipit iure similique id deserunt possimus dolore consectetur facilis ipsum perspiciatis. Voluptatem, quis! Libero voluptatibus, culpa nulla corporis velit totam nisi iste enim. Aliquid ad unde, corrupti velit dignissimos voluptatibus at?
-        </p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="blog-2.png" alt="" width="500" height="500">
-      </div>
-    </div>
-  </div>
-    
-    
-    <!-- for footer  -->
+     <!-- for footer  -->
     <div class="b-example-divider"></div>
     <div class="container">
       <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a href="index.html" class="nav-link px-2 text-muted fw-bold">Home</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="blog.html" class="nav-link px-2 text-muted fw-bold">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link px-2 text-muted fw-bold">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a href="faq.html" class="nav-link px-2 text-muted fw-bold">FAQs</a>
           </li>
           <li class="nav-item">
             <a href="about.html" class="nav-link px-2 text-muted fw-bold">About</a>
           </li>
+          <li class="nav-item">
+            <a href="review.html" class="nav-link px-2 text-muted fw-bold">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link px-2 text-muted fw-bold">Contact</a>
+          </li>
         </ul>
-        <p class="text-center text-muted">Copyright © 2022 All Rights Reserved by
-          <a href="index.html" class="nav-link px-4 fw-bold text-muted">
-            CL!ck
+        
+        <div id="media-links">
+          <div class="col-md-6">
+          </div>
+          <div class="col-md-6">
+            <ul class="list-inline text-md-end">
+              <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook fa-lg"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>
+              <li class="list-inline-item"><a href="https://github.com/" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
+              <li class="list-inline-item"><a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://discord.com/" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-center text-muted">Copyright © 2022 All Rights Reserved
+          <a href="index.html" class="nav-link px-4 fw-bold text-center text-muted">
+            PawHelp!
           </a>
         </p>
-      </footer>
-    </div>
-    <div class="b-example-divider"></div>
+
+        <!-- for the media links -->
+
+    </div> 
+    </footer>
+
+
 
     <!-- script for JS  -->
     <script

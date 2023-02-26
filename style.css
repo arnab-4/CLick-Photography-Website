@@ -1,0 +1,121 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Phudu&family=Poppins:wght@300&family=Shantell+Sans:ital,wght@1,300&display=swap');
+
+
+  /* for margin and padding  */
+
+
+  html, body {
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* for adopt me  */
+  .heading{
+    font-family: 'Shantell Sans', cursive;
+    background: url('/image/banner.jpg');
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    /* padding:24px 0px; */
+    margin: 14px 0px;
+  }
+  
+/* for background color of navbar */
+#bg-color{
+    background: rgb(198, 105, 59);
+    padding:2px 28px;
+}
+
+
+/* for logo image  */
+#logo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding: 9px 9px;
+  }
+
+  /* for navbar background */
+  #navbar-bg{
+    background: #8e4514;
+   margin: -15px;
+    /* position: fixed; */
+  }
+
+  /* for heading in navnbar */
+  #heading-navbar{
+    
+    font-family: 'Shantell Sans', cursive;
+    /* margin-top: 5px; */
+    font-size: 27px;
+    /* padding-top: 11px; */
+    margin-top: -9px;
+  }
+
+  /* for logo and heading  */
+  #logo-heading{
+    padding: 15px 12px;
+  }
+
+  /* css part for the media links */
+  #footer{
+    background:red;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  i{
+    color:rgba(84, 80, 80, 0.233);
+  }
+
+  /* for carousel image  */
+  .carousel-item{
+    
+    max-width: 100% ;
+    height: auto;
+  }
+
+  /* media links  */
+  #media-links{
+    padding-left: 150px;
+  }
+
+  #features-loc{
+    padding: 5px;
+    color: #dba785;
+  }
+
+
+
+
+  /* for adoptation form  */
+
+
+  .gradient-custom {
+    /* fallback for old browsers */
+    background: #f093fb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1))
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+
+ 
